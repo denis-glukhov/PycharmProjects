@@ -11,7 +11,6 @@ class MyApp (App):
                       background_normal = ''
                       )
     def btn_press(self, instance):
-        print("Кнопка нажата")
         instance.text = 'Hello User!'
 
 
