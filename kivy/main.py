@@ -17,7 +17,9 @@ class MyApp (App):
         Config.set('graphics', 'width', '380');
         Config.set('graphics', 'height', '280');
 
-        f1 = FloatLayout(size = (30, 30))
+        s = Scatter()
+        f1 = FloatLayout(size = (300, 300))
+        s.add_widget(f1)
         f1.add_widget(Button(text = '!!!',
                       font_size = 30,
                       on_press = self.btn_press,
@@ -27,12 +29,12 @@ class MyApp (App):
                       pos = (int(height)/2 - int(height)/8,
                              int(width) / 2 - int(width)/8)
                       ));
-        return f1
+        return s#f1
 
     def btn_press(self, instance):
         print('Buton is pressed!')
         instance.text = 'Hello User!'
-        instance.exit
+        #instance.exit
 
 if __name__ == '__main__':
     MyApp().run()
