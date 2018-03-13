@@ -18,7 +18,7 @@ for nn in range(n):
         for j in rr:
             if i == y and j<y:
                 m[i][j]+=m[i][j+1]+1
-            elif j == x and i < y:#  and i > x:
+            elif j == x and i < y  and i > x:
                 m[i][j] += m[i+1][j] + 1
 
 for i in m:
